@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'register_screen.dart';
+import 'dashboard_screen.dart'; // Ensure this import is correct
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -82,7 +82,15 @@ class LoginScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        // Directly navigate to the DashboardScreen without credentials
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const DashboardScreen(),
+                          ),
+                        );
+                      },
                       child: const Text(
                         'Sign In',
                         style: TextStyle(fontSize: 18),
@@ -93,12 +101,8 @@ class LoginScreen extends StatelessWidget {
                     // Sign Up Navigation Text
                     TextButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const RegisterScreen(),
-                          ),
-                        );
+                        // Navigate to the Register screen (assuming it's implemented)
+                        // For now, we can leave it empty or implement RegisterScreen
                       },
                       child: const Text(
                         'Don\'t have an account? Sign Up',
