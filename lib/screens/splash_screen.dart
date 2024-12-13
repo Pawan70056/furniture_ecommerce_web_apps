@@ -68,7 +68,7 @@ class _SplashScreenState extends State<SplashScreen>
                   SizedBox(height: 20),
                   // App Name
                   Text(
-                    'Furniture',
+                    'Hello !',
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
