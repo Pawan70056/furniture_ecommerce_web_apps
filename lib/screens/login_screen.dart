@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:funiture_ecommerce/screens/register_screen.dart';
 import 'dashboard_screen.dart'; // Ensure this import is correct
 
 class LoginScreen extends StatelessWidget {
@@ -98,11 +99,14 @@ class LoginScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
 
-                    // Sign Up Navigation Text
                     TextButton(
                       onPressed: () {
-                        // Navigate to the Register screen (assuming it's implemented)
-                        // For now, we can leave it empty or implement RegisterScreen
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  RegisterScreen()), // Replace 'RegisterPage()' with your actual registration page widget.
+                        );
                       },
                       child: const Text(
                         'Don\'t have an account? Sign Up',
