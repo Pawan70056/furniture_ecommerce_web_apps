@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:funiture_ecommerce/view/login_view.dart';
+import 'package:funiture_ecommerce/views/login_view.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({super.key});

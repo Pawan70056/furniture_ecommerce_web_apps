@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:funiture_ecommerce/view/onboarding_view.dart';
+import 'package:funiture_ecommerce/views/onboarding_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});

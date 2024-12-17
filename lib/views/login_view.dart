@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:funiture_ecommerce/view/register_view.dart';
+import 'package:funiture_ecommerce/views/register_view.dart';
 import 'dashboard_view.dart';
 
 class LoginView extends StatelessWidget {

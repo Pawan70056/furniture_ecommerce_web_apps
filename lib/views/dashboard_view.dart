@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:funiture_ecommerce/view/cart_view.dart';
-import 'package:funiture_ecommerce/view/categories_view.dart';
-import 'package:funiture_ecommerce/view/home_view.dart';
-import 'package:funiture_ecommerce/view/profile_view.dart';
+import 'package:funiture_ecommerce/views/cart_view.dart';
+import 'package:funiture_ecommerce/views/categories_view.dart';
+import 'package:funiture_ecommerce/views/home_view.dart';
+import 'package:funiture_ecommerce/views/profile_view.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({super.key});

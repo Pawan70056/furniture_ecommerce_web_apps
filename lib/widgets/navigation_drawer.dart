@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:funiture_ecommerce/view/view_orders_view.dart';
-import 'package:funiture_ecommerce/view/profile_view.dart';
-import 'package:funiture_ecommerce/view/wishlist_view.dart';
+import 'package:funiture_ecommerce/views/profile_view.dart';
+import 'package:funiture_ecommerce/views/wishlist_view.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({super.key});
