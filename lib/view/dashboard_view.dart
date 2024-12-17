@@ -45,14 +45,6 @@ class _DashboardViewState extends State<DashboardView> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.notifications, color: Colors.black),
-            onPressed: () {
-              // Notification logic here
-            },
-          ),
-        ],
       ),
       body: _screens[_currentIndex], // Dynamic screen rendering
       bottomNavigationBar: BottomNavigationBar(

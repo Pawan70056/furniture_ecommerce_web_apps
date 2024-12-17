@@ -5,6 +5,7 @@ class OnboardingIndicator extends StatelessWidget {
   final int total;
 
   const OnboardingIndicator({
+    super.key,
     required this.currentIndex,
     required this.total,
   });

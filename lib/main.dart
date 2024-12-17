@@ -3,7 +3,6 @@ import 'package:funiture_ecommerce/view/cart_view.dart';
 import 'package:funiture_ecommerce/view/categories_view.dart';
 import 'package:funiture_ecommerce/view/dashboard_view.dart';
 import 'package:funiture_ecommerce/view/home_view.dart';
-import 'package:funiture_ecommerce/view/profile_view.dart';
 import 'package:funiture_ecommerce/view/settings_view.dart';
 import 'view/splash_view.dart';
 import 'view/onboarding_view.dart';
@@ -32,7 +31,6 @@ class MyApp extends StatelessWidget {
         '/home': (context) => HomeView(),
         '/categories': (context) => CategoriesView(),
         '/cart': (context) => CartView(),
-        '/profile': (context) => ProfileView(),
         '/settings': (context) => SettingsView(),
       },
     );

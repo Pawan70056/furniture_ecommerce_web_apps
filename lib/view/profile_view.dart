@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ProfileView extends StatefulWidget {
-  const ProfileView({super.key});
+class ProfileView extends StatelessWidget {
+  const ProfileView({Key? key}) : super(key: key);
 
-  @override
-  State<ProfileView> createState() => _ProfileViewState();
-}
-
-class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Profile Screen',
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-      ),
+    return Scaffold(
+      appBar: AppBar(title: const Text('Profile')),
+      body: const Center(child: Text('Manage your profile here.')),
     );
   }
 }

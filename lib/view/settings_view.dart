@@ -8,7 +8,7 @@ class SettingsView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Settings'),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.brown,
       ),
       body: ListView(
         children: [
@@ -20,13 +20,19 @@ class SettingsView extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Privacy Policy'),
+            title: Text('Updates'),
             onTap: () {
               // Navigate to privacy policy
             },
           ),
           ListTile(
-            title: Text('Terms of Service'),
+            title: Text('Personal Info'),
+            onTap: () {
+              // Navigate to privacy policy
+            },
+          ),
+          ListTile(
+            title: Text('Chnage Country'),
             onTap: () {
               // Navigate to terms of service
             },

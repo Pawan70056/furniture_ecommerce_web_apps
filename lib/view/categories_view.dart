@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CategoriesView extends StatefulWidget {
+class CategoriesView extends StatelessWidget {
   const CategoriesView({super.key});
 
   @override
-  State<CategoriesView> createState() => _CategoriesViewState();
-}
-
-class _CategoriesViewState extends State<CategoriesView> {
-  @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Cart Screen',
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-      ),
+    return Scaffold(
+      appBar: AppBar(title: const Text('Your Categories')),
+      body: Center(child: Text('Categories Items will be shown here.')),
     );
   }
 }

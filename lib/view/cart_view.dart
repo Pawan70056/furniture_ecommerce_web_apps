@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CartView extends StatefulWidget {
+class CartView extends StatelessWidget {
   const CartView({super.key});
 
   @override
-  State<CartView> createState() => _CartViewState();
-}
-
-class _CartViewState extends State<CartView> {
-  @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Cart Screen',
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-      ),
+    return Scaffold(
+      appBar: AppBar(title: const Text('Your Cart')),
+      body: Center(child: Text('Cart Items will be shown here.')),
     );
   }
 }
