@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:funiture_ecommerce/view/view_orders_view.dart';
+import 'package:funiture_ecommerce/views/view_orders_view.dart';
 import 'package:funiture_ecommerce/views/profile_view.dart';
 import 'package:funiture_ecommerce/views/wishlist_view.dart';
 
