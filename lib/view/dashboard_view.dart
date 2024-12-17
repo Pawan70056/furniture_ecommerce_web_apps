@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
-import 'categories_screen.dart';
-import 'cart_screen.dart';
-import 'profile_screen.dart';
+import 'package:funiture_ecommerce/view/cart_view.dart';
+import 'package:funiture_ecommerce/view/categories_view.dart';
+import 'package:funiture_ecommerce/view/home_view.dart';
+import 'package:funiture_ecommerce/view/profile_view.dart';
 
-class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({super.key});
+class DashboardView extends StatefulWidget {
+  const DashboardView({super.key});
 
   @override
-  _DashboardScreenState createState() => _DashboardScreenState();
+  State<DashboardView> createState() => _DashboardViewState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
-  // Current selected index in the bottom navigation bar
+class _DashboardViewState extends State<DashboardView> {
   int _currentIndex = 0;
 
   // List of screens for navigation
   final List<Widget> _screens = [
-    HomeScreen(),
-    CategoriesScreen(),
-    CartScreen(),
-    ProfileScreen(),
+    HomeView(),
+    CategoriesView(),
+    CartView(),
+    ProfileView(),
   ];
 
   // Titles for AppBar

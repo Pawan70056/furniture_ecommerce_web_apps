@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:funiture_ecommerce/screens/cart_screen.dart';
-import 'package:funiture_ecommerce/screens/categories_screen.dart';
-import 'package:funiture_ecommerce/screens/dashboard_screen.dart';
-import 'package:funiture_ecommerce/screens/home_screen.dart';
-import 'package:funiture_ecommerce/screens/profile_screen.dart';
-import 'package:funiture_ecommerce/screens/settings_screen.dart';
-import 'screens/splash_screen.dart';
-import 'screens/onboarding_screen.dart';
-import 'screens/login_screen.dart';
-import 'screens/register_screen.dart';
+import 'package:funiture_ecommerce/view/cart_view.dart';
+import 'package:funiture_ecommerce/view/categories_view.dart';
+import 'package:funiture_ecommerce/view/dashboard_view.dart';
+import 'package:funiture_ecommerce/view/home_view.dart';
+import 'package:funiture_ecommerce/view/profile_view.dart';
+import 'package:funiture_ecommerce/view/settings_view.dart';
+import 'view/splash_view.dart';
+import 'view/onboarding_view.dart';
+import 'view/login_view.dart';
+import 'view/register_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,16 +24,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue),
       initialRoute: '/',
       routes: {
-        '/': (context) => SplashScreen(),
-        '/onboarding': (context) => OnboardingScreen(),
-        '/login': (context) => LoginScreen(),
-        '/register': (context) => RegisterScreen(),
-        '/dashboard': (context) => DashboardScreen(),
-        '/home': (context) => HomeScreen(),
-        '/categories': (context) => CategoriesScreen(),
-        '/cart': (context) => CartScreen(),
-        '/profile': (context) => ProfileScreen(),
-        '/settings': (context) => SettingsScreen(),
+        '/': (context) => SplashView(),
+        '/onboarding': (context) => OnboardingView(),
+        '/login': (context) => LoginView(),
+        '/register': (context) => RegisterView(),
+        '/dashboard': (context) => DashboardView(),
+        '/home': (context) => HomeView(),
+        '/categories': (context) => CategoriesView(),
+        '/cart': (context) => CartView(),
+        '/profile': (context) => ProfileView(),
+        '/settings': (context) => SettingsView(),
       },
     );
   }

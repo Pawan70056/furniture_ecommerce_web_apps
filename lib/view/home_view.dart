@@ -7,8 +7,8 @@ const Color kBackgroundColor = Colors.white;
 const double kPadding = 16.0;
 
 // HomeScreen Widget
-class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+class HomeView extends StatelessWidget {
+  HomeView({super.key});
 
   // Categories Data
   final List<Map<String, dynamic>> categories = [

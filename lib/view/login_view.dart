@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:funiture_ecommerce/screens/register_screen.dart';
-import 'dashboard_screen.dart';
+import 'package:funiture_ecommerce/view/register_view.dart';
+import 'dashboard_view.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class LoginView extends StatelessWidget {
+  const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +88,7 @@ class LoginScreen extends StatelessWidget {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DashboardScreen(),
+                            builder: (context) => DashboardView(),
                           ),
                         );
                       },
@@ -104,7 +104,7 @@ class LoginScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => RegisterScreen()),
+                              builder: (context) => RegisterView()),
                         );
                       },
                       child: const Text(

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:funiture_ecommerce/screens/onboarding_screen.dart';
+import 'package:funiture_ecommerce/view/onboarding_view.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class SplashView extends StatefulWidget {
+  const SplashView({super.key});
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  State<SplashView> createState() => _SplashViewState();
 }
 
-class _SplashScreenState extends State<SplashScreen>
+class _SplashViewState extends State<SplashView>
     with SingleTickerProviderStateMixin {
   AnimationController? _controller;
   Animation<double>? _animation;
@@ -41,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen>
     await Future.delayed(Duration(seconds: 3), () {});
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => OnboardingScreen()),
+      MaterialPageRoute(builder: (context) => OnboardingView()),
     );
   }
 

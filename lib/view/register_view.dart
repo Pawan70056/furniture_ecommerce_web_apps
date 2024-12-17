@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:funiture_ecommerce/screens/login_screen.dart';
+import 'package:funiture_ecommerce/view/login_view.dart';
 
-class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({super.key});
+class RegisterView extends StatelessWidget {
+  const RegisterView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -116,7 +116,7 @@ class RegisterScreen extends StatelessWidget {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const LoginScreen(),
+                            builder: (context) => const LoginView(),
                           ),
                         );
                       },

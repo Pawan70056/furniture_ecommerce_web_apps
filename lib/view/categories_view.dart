@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CartScreen extends StatelessWidget {
-  const CartScreen({super.key});
+class CategoriesView extends StatefulWidget {
+  const CategoriesView({super.key});
 
+  @override
+  State<CategoriesView> createState() => _CategoriesViewState();
+}
+
+class _CategoriesViewState extends State<CategoriesView> {
   @override
   Widget build(BuildContext context) {
     return Center(
