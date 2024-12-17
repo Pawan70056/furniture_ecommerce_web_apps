@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:funiture_ecommerce/screens/register_screen.dart';
-import 'dashboard_screen.dart'; // Ensure this import is correct
+import 'dashboard_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -13,7 +13,7 @@ class LoginScreen extends StatelessWidget {
         children: [
           // Background Image
           Image.asset(
-            'assets/images/register.png', // Ensure this path matches your assets folder
+            'assets/images/register.png',
             fit: BoxFit.cover,
           ),
           // Overlay for better contrast
@@ -88,7 +88,7 @@ class LoginScreen extends StatelessWidget {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DashboardScreen(),
+                            builder: (context) => DashboardScreen(),
                           ),
                         );
                       },
@@ -104,8 +104,7 @@ class LoginScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  RegisterScreen()), // Replace 'RegisterPage()' with your actual registration page widget.
+                              builder: (context) => RegisterScreen()),
                         );
                       },
                       child: const Text(

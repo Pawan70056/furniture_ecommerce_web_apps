@@ -6,42 +6,44 @@ class OnboardingPage extends StatelessWidget {
   final String description;
 
   const OnboardingPage({
-    Key? key,
+    super.key,
     required this.image,
     required this.title,
     required this.description,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Image.asset(image),
-        SizedBox(height: 20),
-        Text(
-          title,
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        SizedBox(height: 10),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32.0),
-          child: Text(
-            description,
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.white70,
+    return Container(
+      color: Colors.white,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          AnimatedContainer(
+            duration: const Duration(seconds: 1),
+            curve: Curves.easeIn,
+            child: Image.asset(
+              image,
+              height: 250,
+              fit: BoxFit.cover,
             ),
-            textAlign: TextAlign.center,
           ),
-        ),
-      ],
+          const SizedBox(height: 20),
+          Text(
+            title,
+            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Text(
+              description,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 16, color: Colors.grey),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

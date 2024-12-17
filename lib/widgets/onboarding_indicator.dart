@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-class OnboardingIndicator extends StatelessWidget {
-  final int currentIndex;
-  final int total;
+class PageIndicator extends StatelessWidget {
+  final int currentPage;
+  final int itemCount;
 
-  const OnboardingIndicator({
-    required this.currentIndex,
-    required this.total,
+  const PageIndicator({
+    super.key,
+    required this.currentPage,
+    required this.itemCount,
   });
 
   @override
@@ -14,13 +15,14 @@ class OnboardingIndicator extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(
-        total,
-        (index) => Container(
+        itemCount,
+        (index) => AnimatedContainer(
+          duration: const Duration(milliseconds: 300),
           margin: const EdgeInsets.symmetric(horizontal: 4),
-          width: currentIndex == index ? 12 : 8,
+          width: currentPage == index ? 10 : 8,
           height: 8,
           decoration: BoxDecoration(
-            color: currentIndex == index ? Colors.blue : Colors.grey,
+            color: currentPage == index ? Colors.teal : Colors.grey.shade400,
             borderRadius: BorderRadius.circular(4),
           ),
         ),

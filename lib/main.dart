@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:funiture_ecommerce/screens/cart_screen.dart';
+import 'package:funiture_ecommerce/screens/categories_screen.dart';
 import 'package:funiture_ecommerce/screens/dashboard_screen.dart';
+import 'package:funiture_ecommerce/screens/home_screen.dart';
+import 'package:funiture_ecommerce/screens/profile_screen.dart';
+import 'package:funiture_ecommerce/screens/settings_screen.dart';
 import 'screens/splash_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/login_screen.dart';
@@ -10,6 +15,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,7 +28,12 @@ class MyApp extends StatelessWidget {
         '/onboarding': (context) => OnboardingScreen(),
         '/login': (context) => LoginScreen(),
         '/register': (context) => RegisterScreen(),
-        '/dashboard': (context) => const DashboardScreen(),
+        '/dashboard': (context) => DashboardScreen(),
+        '/home': (context) => HomeScreen(),
+        '/categories': (context) => CategoriesScreen(),
+        '/cart': (context) => CartScreen(),
+        '/profile': (context) => ProfileScreen(),
+        '/settings': (context) => SettingsScreen(),
       },
     );
   }
