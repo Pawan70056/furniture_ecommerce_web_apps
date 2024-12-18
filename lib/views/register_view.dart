@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/button_list.dart';
+import 'package:flutter_signin_button/button_view.dart';
 import 'package:funiture_ecommerce/views/login_view.dart';
 
 class RegisterView extends StatelessWidget {
@@ -127,6 +129,37 @@ class RegisterView extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
 
+                    Text(
+                      '_______________________ Or Sign Up with _______________________',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+
+                    SignInButton(
+                      Buttons.Google,
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      onPressed: () {
+                        // Implement Google Sign-in logic here
+                      },
+                    ),
+
+                    SignInButton(
+                      Buttons.Facebook,
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      onPressed: () {
+                        // Implement Facebook Sign-in logic here
+                      },
+                    ),
                     // Sign In Navigation Text
                     TextButton(
                       onPressed: () {
@@ -135,7 +168,7 @@ class RegisterView extends StatelessWidget {
                       child: const Text(
                         'Already have an account? Sign In',
                         style: TextStyle(
-                          color: Colors.tealAccent,
+                          color: Colors.white,
                           fontSize: 16,
                         ),
                       ),

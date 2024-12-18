@@ -32,7 +32,7 @@ class SettingsView extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Chnage Country'),
+            title: Text('Change Country'),
             onTap: () {
               // Navigate to terms of service
             },

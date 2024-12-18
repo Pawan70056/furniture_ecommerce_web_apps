@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:funiture_ecommerce/views/forgot_password_view.dart';
 import 'package:funiture_ecommerce/views/register_view.dart';
 import 'dashboard_view.dart';
 
@@ -71,7 +73,28 @@ class LoginView extends StatelessWidget {
                       obscureText: true,
                       style: TextStyle(color: Colors.white),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 10),
+
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ForgotPasswordView()),
+                          );
+                        },
+                        child: const Text(
+                          'Forgot Password?',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
 
                     // Sign In Button
                     ElevatedButton(
@@ -84,7 +107,7 @@ class LoginView extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        // Directly navigate to the DashboardScreen without credentials
+                        // Directly navigate to  the DashboardScreen without credentials
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
@@ -94,8 +117,41 @@ class LoginView extends StatelessWidget {
                       },
                       child: const Text(
                         'Sign In',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
+                    ),
+                    const SizedBox(height: 20),
+
+                    Text(
+                      '_______________________ Or Sigin in with _______________________',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+
+                    // Social Media Buttons
+                    SignInButton(
+                      Buttons.Google,
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      onPressed: () {
+                        // Implement Google Sign-in logic here
+                      },
+                    ),
+                    SignInButton(
+                      Buttons.Facebook,
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      onPressed: () {
+                        // Implement Facebook Sign-in logic here
+                      },
                     ),
                     const SizedBox(height: 10),
 
@@ -110,7 +166,7 @@ class LoginView extends StatelessWidget {
                       child: const Text(
                         'Don\'t have an account? Sign Up',
                         style: TextStyle(
-                          color: Colors.tealAccent,
+                          color: Colors.white,
                           fontSize: 16,
                         ),
                       ),
