@@ -4,10 +4,11 @@ import 'package:funiture_ecommerce/views/categories_view.dart';
 import 'package:funiture_ecommerce/views/dashboard_view.dart';
 import 'package:funiture_ecommerce/views/home_view.dart';
 import 'package:funiture_ecommerce/views/settings_view.dart';
-import 'views/splash_view.dart';
-import 'views/onboarding_view.dart';
+
 import 'views/login_view.dart';
+import 'views/onboarding_view.dart';
 import 'views/register_view.dart';
+import 'views/splash_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Furniture Shop',
       theme: ThemeData(primarySwatch: Colors.blue),
+      debugShowCheckedModeBanner: false, // Removes the DEBUG banner.
       initialRoute: '/',
       routes: {
         '/': (context) => SplashView(),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:funiture_ecommerce/views/about_app_view.dart';
-import 'package:funiture_ecommerce/views/view_orders_view.dart';
-import 'package:funiture_ecommerce/views/settings_view.dart';
-import 'package:funiture_ecommerce/widgets/product_card.dart';
 import 'package:funiture_ecommerce/views/categories_view.dart';
+import 'package:funiture_ecommerce/views/settings_view.dart';
+import 'package:funiture_ecommerce/views/view_orders_view.dart';
+import 'package:funiture_ecommerce/widgets/product_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
