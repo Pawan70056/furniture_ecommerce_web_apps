@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:funiture_ecommerce/data/categories_data.dart';
 import 'package:funiture_ecommerce/data/new_arrivals_data.dart';
-import 'package:funiture_ecommerce/views/about_app_view.dart';
 import 'package:funiture_ecommerce/views/categories_view.dart';
-import 'package:funiture_ecommerce/views/settings_view.dart';
-import 'package:funiture_ecommerce/views/view_orders_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -50,73 +47,73 @@ class _HomeViewState extends State<HomeView> {
           ),
         ],
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text(
-                'Menu',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Home'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: const Text('Categories'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const CategoriesView()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('View Orders'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ViewOrdersView()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Settings'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const SettingsView()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('About'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const AboutAppView()),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
+      // drawer: Drawer(
+      //   child: ListView(
+      //     padding: EdgeInsets.zero,
+      //     children: [
+      //       const DrawerHeader(
+      //         decoration: BoxDecoration(
+      //           color: Colors.blue,
+      //         ),
+      //         child: Text(
+      //           'Menu',
+      //           style: TextStyle(
+      //             color: Colors.white,
+      //             fontSize: 24,
+      //           ),
+      //         ),
+      //       ),
+      //       ListTile(
+      //         title: const Text('Home'),
+      //         onTap: () {
+      //           Navigator.pop(context);
+      //         },
+      //       ),
+      //       ListTile(
+      //         title: const Text('Categories'),
+      //         onTap: () {
+      //           Navigator.pop(context);
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(
+      //                 builder: (context) => const CategoriesView()),
+      //           );
+      //         },
+      //       ),
+      //       ListTile(
+      //         title: const Text('View Orders'),
+      //         onTap: () {
+      //           Navigator.pop(context);
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(
+      //                 builder: (context) => const ViewOrdersView()),
+      //           );
+      //         },
+      //       ),
+      //       ListTile(
+      //         title: const Text('Settings'),
+      //         onTap: () {
+      //           Navigator.pop(context);
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(builder: (context) => const SettingsView()),
+      //           );
+      //         },
+      //       ),
+      //       ListTile(
+      //         title: const Text('About'),
+      //         onTap: () {
+      //           Navigator.pop(context);
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(builder: (context) => const AboutAppView()),
+      //           );
+      //         },
+      //       ),
+      //     ],
+      //   ),
+      // ),
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -341,7 +338,8 @@ class _HomeViewState extends State<HomeView> {
                                   borderRadius: BorderRadius.circular(8.0),
                                   image: DecorationImage(
                                     image: AssetImage(
-                                        newArrivals[index]['image']!),
+                                      'assets/images/sofa.png',
+                                    ),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -415,7 +413,7 @@ class _HomeViewState extends State<HomeView> {
                                   borderRadius: BorderRadius.circular(8.0),
                                   image: const DecorationImage(
                                     image: AssetImage(
-                                        'assets/sample.jpg'), // Example asset
+                                        'assets/images/table.png'), // Example asset
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -489,7 +487,7 @@ class _HomeViewState extends State<HomeView> {
                                   borderRadius: BorderRadius.circular(8.0),
                                   image: const DecorationImage(
                                     image: AssetImage(
-                                        'assets/sample.jpg'), // Example asset
+                                        'assets/images/sofa.png'), // Example asset
                                     fit: BoxFit.cover,
                                   ),
                                 ),
