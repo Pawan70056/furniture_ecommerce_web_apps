@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:funiture_ecommerce/data/categories_data.dart';
 import 'package:funiture_ecommerce/data/new_arrivals_data.dart';
 import 'package:funiture_ecommerce/views/categories_view.dart';
+import 'package:funiture_ecommerce/views/customer_favorite_view.dart';
+import 'package:funiture_ecommerce/views/featured_collection_view.dart';
+import 'package:funiture_ecommerce/views/newarrival_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -311,7 +314,7 @@ class _HomeViewState extends State<HomeView> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              const Placeholder(), // Replace with your New Arrivals View
+                              const NewarrivalView(), // Replace with your New Arrivals View
                         ),
                       );
                     },
@@ -385,7 +388,7 @@ class _HomeViewState extends State<HomeView> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              const Placeholder(), // Replace with your New Arrivals View
+                              const CustomerFavoriteView(), // Replace with your New Arrivals View
                         ),
                       );
                     },
@@ -459,7 +462,7 @@ class _HomeViewState extends State<HomeView> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              const Placeholder(), // Replace with your New Arrivals View
+                              const FeaturedCollectionView(), // Replace with your New Arrivals View
                         ),
                       );
                     },

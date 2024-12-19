@@ -30,8 +30,8 @@ class _DashboardViewState extends State<DashboardView> {
         currentIndex: _currentIndex,
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.grey,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         onTap: (index) {
           setState(() {
             _currentIndex = index; // Update selected index
