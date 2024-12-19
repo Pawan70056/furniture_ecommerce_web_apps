@@ -22,30 +22,9 @@ class _DashboardViewState extends State<DashboardView> {
     ProfileView(),
   ];
 
-  // Titles for AppBar
-  final List<String> _titles = [
-    'Home',
-    'Categories',
-    'Cart',
-    'Profile',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: true,
-        title: Text(
-          _titles[_currentIndex],
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
       body: _screens[_currentIndex], // Dynamic screen rendering
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
