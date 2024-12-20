@@ -125,7 +125,7 @@ class LoginView extends StatelessWidget {
                     const SizedBox(height: 20),
 
                     Text(
-                      '_________________ Or Sign in with _________________',
+                      '_______ Or Sign in with _______',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
