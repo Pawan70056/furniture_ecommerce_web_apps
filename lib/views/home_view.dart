@@ -21,7 +21,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey,
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),

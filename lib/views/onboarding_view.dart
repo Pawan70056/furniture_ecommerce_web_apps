@@ -16,7 +16,7 @@ class _OnboardingViewState extends State<OnboardingView> {
   final List<Map<String, String>> _onboardingData = [
     {
       "image": "assets/images/onboarding1.png",
-      "title": "Welcome to Vexa",
+      "title": "Welcome to furniture",
       "description": "Discover a seamless way to connect and share ideas.",
     },
     {

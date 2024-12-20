@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:funiture_ecommerce/views/forgot_password_view.dart';
 import 'package:funiture_ecommerce/views/register_view.dart';
+
 import 'dashboard_view.dart';
 
 class LoginView extends StatelessWidget {
@@ -36,6 +37,7 @@ class LoginView extends StatelessWidget {
                       'Login',
                       textAlign: TextAlign.center,
                       style: TextStyle(
+                        // fontFamily: 'Montserrat Italic',
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -123,7 +125,7 @@ class LoginView extends StatelessWidget {
                     const SizedBox(height: 20),
 
                     Text(
-                      '_______________________ Or Sigin in with _______________________',
+                      '_________________ Or Sign in with _________________',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,

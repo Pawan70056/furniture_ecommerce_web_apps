@@ -130,7 +130,7 @@ class RegisterView extends StatelessWidget {
                     const SizedBox(height: 10),
 
                     Text(
-                      '_______________________ Or Sign Up with _______________________',
+                      '__________________ Or Sign Up with __________________',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,

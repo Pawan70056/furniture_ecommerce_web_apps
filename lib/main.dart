@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:funiture_ecommerce/core/app_theme/app_theme.dart';
 import 'package:funiture_ecommerce/views/cart_view.dart';
 import 'package:funiture_ecommerce/views/categories_view.dart';
 import 'package:funiture_ecommerce/views/dashboard_view.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Furniture Shop',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: getApplicationTheme(),
       debugShowCheckedModeBanner: false, // Removes the DEBUG banner.
       initialRoute: '/',
       routes: {
