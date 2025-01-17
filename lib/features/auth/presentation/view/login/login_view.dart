@@ -86,22 +86,22 @@ class _LoginScreenState extends State<LoginScreen> {
                   state is LoginLoading
                       ? const Center(child: CircularProgressIndicator())
                       : ElevatedButton(
-                    onPressed: () {
-                      if (_formKey.currentState?.validate() ?? false) {
-                        final username = _usernameController.text.trim();
-                        final password = _passwordController.text.trim();
+                          onPressed: () {
+                            if (_formKey.currentState?.validate() ?? false) {
+                              final username = _usernameController.text.trim();
+                              final password = _passwordController.text.trim();
 
-                        // Dispatch the login event
-                        context.read<LoginBloc>().add(
-                          LoginSubmitted(
-                            username: username,
-                            password: password,
-                          ),
-                        );
-                      }
-                    },
-                    child: const Text('Login'),
-                  ),
+                              // Dispatch the login event
+                              context.read<LoginBloc>().add(
+                                    LoginSubmitted(
+                                      username: username,
+                                      password: password,
+                                    ),
+                                  );
+                            }
+                          },
+                          child: const Text('Login'),
+                        ),
                   const SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
