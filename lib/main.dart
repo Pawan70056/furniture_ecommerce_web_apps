@@ -1,41 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:funiture_ecommerce/core/app_theme/app_theme.dart';
-import 'package:funiture_ecommerce/views/cart_view.dart';
-import 'package:funiture_ecommerce/views/categories_view.dart';
-import 'package:funiture_ecommerce/views/dashboard_view.dart';
-import 'package:funiture_ecommerce/views/home_view.dart';
-import 'package:funiture_ecommerce/views/settings_view.dart';
+import 'package:softwarica_student_management_bloc/app/app.dart';
+import 'package:softwarica_student_management_bloc/app/di/di.dart';
+import 'package:softwarica_student_management_bloc/core/network/hive_service.dart';
 
-import 'views/login_view.dart';
-import 'views/onboarding_view.dart';
-import 'views/register_view.dart';
-import 'views/splash_view.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await HiveService.init();
 
-void main() {
-  runApp(MyApp());
-}
+  // await HiveService().clearStudentBox();
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  await initDependencies();
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Furniture Shop',
-      theme: getApplicationTheme(),
-      debugShowCheckedModeBanner: false, // Removes the DEBUG banner.
-      initialRoute: '/',
-      routes: {
-        '/': (context) => SplashView(),
-        '/onboarding': (context) => OnboardingView(),
-        '/login': (context) => LoginView(),
-        '/register': (context) => RegisterView(),
-        '/dashboard': (context) => DashboardView(),
-        '/home': (context) => HomeView(),
-        '/categories': (context) => CategoriesView(),
-        '/cart': (context) => CartView(),
-        '/settings': (context) => SettingsView(),
-      },
-    );
-  }
+  runApp(
+    App(),
+  );
 }
