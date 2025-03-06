@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../core/theme/theme.dart';
+import '../features/auth/domain/use_case/login_usecase.dart';
+import '../features/auth/presentation/view/forget_password.dart';
+import '../features/auth/presentation/view_model/login/login_bloc.dart';
+import '../features/splash/presentation/view/splash_screen.dart';
+import '../features/auth/presentation/view/login_screen.dart'; // Import LoginScreen
+import '../features/auth/presentation/view/register_screen.dart'; // Import RegisterScreen
+import '../features/dashboard/presentation/view/dashboard_screen.dart'; // Import DashboardScreen
+import '../features/splash/presentation/view_model/splash_cubit.dart';
+import 'di/di.dart';
+
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'furniture Shop',
+      theme: AppTheme().themeData(isDarkMode: false),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => BlocProvider.value(
+              value: getIt<SplashCubit>(),
+              child: const SplashScreen(),
+            ),
+        '/login': (context) => MultiBlocProvider(
+              providers: [
+                BlocProvider<LoginBloc>(
+                  create: (context) => LoginBloc(
+                    loginUseCase:
+                        getIt<LoginUseCase>(), // Pass the loginUseCase here
+                  ),
+                ),
+              ],
+              child: LoginScreen(), // LoginScreen with LoginBloc
+            ),
+        '/register': (context) => RegisterScreen(), // Register screen route
+        't_password': (context) =>
+            ForgotPasswordScreen(), // Forget Password screen route
+        '/dashboard': (context) => DashboardScreen(), // Dashboard screen route
+      },
+    );
+  }
+}
